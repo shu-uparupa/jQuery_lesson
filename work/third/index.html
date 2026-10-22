@@ -33,6 +33,7 @@
       $(function() {
         $('.nav').find('li').click(function(){
           var index = $(this).index();
+          console.log(index); //Number型
           $('.contents').find('li').addClass('is-hidden');
           $('.contents').find('li').eq(index).removeClass('is-hidden');
         });
