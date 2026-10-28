@@ -35,7 +35,7 @@
         <button class="btn mt" data-js="reset">戻る</button>
       `;
       $('#wrapper').on('click', '#pokemon_search', function(){
-        let id = Math.floor(Math.random() * 151)+ 1;
+        let id = Math.floor(Math.random() * 151) + 1;
 
         $.ajax({
           url: 'https://pokeapi.co/api/v2/pokemon/' + id,
@@ -52,7 +52,7 @@
             }).name;
 
             $('#wrapper').html(encountHtml);
-            $('.name').text(name)
+            $('.name').text(name);
             $('.img').attr('src', img);
           })
         })
