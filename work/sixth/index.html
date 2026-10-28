@@ -41,9 +41,6 @@
           url: 'https://pokeapi.co/api/v2/pokemon/' + id,
           method: 'GET'
         }).done(function(res){
-          // console.log(res);
-          // console.log(res.species.url);  ポケモンの詳細取得
-          // console.log(res.sprites.front_default);  ポケモンの画像を取得する
           let img = res.sprites.front_default;
 
           $.ajax({
@@ -67,7 +64,6 @@
             url:'https://pokeapi.co/api/v2/item/4',
             method:'GET'
           }).done(function(success){
-            // console.log(success)
             let img = success.sprites.default
             $('#wrapper').html(doneHtml);
             $('.img').attr('src', img);
